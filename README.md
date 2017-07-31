@@ -1,2 +1,2 @@
 # lttzzlll
-personal blog
+[personal blog](https://lttzzlll.github.io/lttzzlll/)
