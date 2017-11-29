@@ -8,9 +8,9 @@ tags: [leetcode, algorithm, matrix]
 
 ### [Rotate Image](https://leetcode.com/problems/rotate-image/description/)
 
-> 图片旋转.
+图片旋转.
 
-> 先以横轴为对称线做一次上下变换,然后再以斜对角线为对称线做一次变换.
+先以横轴为对称线做一次上下变换,然后再以斜对角线为对称线做一次变换.
 
 ```
 0.
@@ -54,6 +54,6 @@ public void rotate(int[][] matrix) {
 {% endhighlight %}
 
 
-> 但是,为什么要这样做变换?
+但是,为什么要这样做变换?
 
-> 接下来, 线性代数, 矩阵运算.
+接下来, 线性代数, 矩阵运算.
