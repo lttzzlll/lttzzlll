@@ -2,7 +2,7 @@
 layout: post
 title: Rotate Image
 gh-repo: lttzzlll/leetcode-java
-gh-badge: [star, fork, follow]
+# gh-badge: [star, fork, follow]
 tags: [leetcode, algorithm, matrix]
 ---
 
