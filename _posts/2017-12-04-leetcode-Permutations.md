@@ -8,6 +8,7 @@ tags: [leetcode, algorithm, backtrac]
 
 ### [Permutations](https://leetcode.com/problems/permutations/description/)
 > 一道很基础的利用回溯解决的问题.
+
 ```Java
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
