@@ -1,3 +1,11 @@
+---
+layout: post
+title: Permutations
+# gh-repo: lttzzlll/leetcode-java
+# gh-badge: [star, fork, follow]
+tags: [leetcode, algorithm, backtrac]
+---
+
 ### [Permutations](https://leetcode.com/problems/permutations/description/)
 > 一道很基础的利用回溯解决的问题.
 ```Java
