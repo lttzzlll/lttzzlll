@@ -6,7 +6,8 @@ title: Asyncio
 tags: [python, asyncio]
 ---
 
-[Source](https://www.youtube.com/watch?v=WSq0S7UvI8E)
+Python中异步的使用
+[原文](https://www.youtube.com/watch?v=WSq0S7UvI8E)
 
 Python实现一个简单的echo服务器。
 
