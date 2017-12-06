@@ -33,7 +33,7 @@ class C(A,B):
 
 运行
 
-```Python Shell
+```Bash
 >>> c = C()
 Base.__init__
 A.__init__
@@ -69,7 +69,7 @@ class C(A,B):
 
 运行
 
-```Python Shell
+```Bash
 >>> c = C()
 Base.__init__
 B.__init__
@@ -84,7 +84,7 @@ C.__init__
 
 为了弄清它的原理，我们需要花点时间解释下Python是如何实现继承的。 对于你定义的每一个类，Python会计算出一个所谓的方法解析顺序(MRO)列表。 这个MRO列表就是一个简单的所有基类的线性顺序表。例如：
 
-```Python Shell
+```Bash
 >>> C.__mro__
 (<class '__main__.C'>, <class '__main__.A'>, <class '__main__.B'>,
 <class '__main__.Base'>, <class 'object'>)
