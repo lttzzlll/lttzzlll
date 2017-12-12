@@ -3,7 +3,7 @@ layout: post
 title: LeetCode - Permutations II
 # gh-repo: lttzzlll/leetcode-java
 # gh-badge: [star, fork, follow]
-tags: [python, class, MRO]
+tags: [leetcode, Permutation, Permutations II]
 ---
 ### [Permutations II](https://leetcode.com/problems/permutations-ii/description/)
 
