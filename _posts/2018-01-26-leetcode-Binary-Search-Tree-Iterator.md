@@ -59,7 +59,7 @@ public class BSTIterator {
 
 因为访问的是一个二叉排序树,所以按顺序访问的次序为 node->left, node.self, node->right.即
 
-```
+```Java
 void preorder(TreeNode root) {
     if (root != null) {
         preorder(root.left);
