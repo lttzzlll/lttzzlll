@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LeetCode - 70. Climbing Stairs
+title: LeetCode - Climbing Stairs
 # gh-repo: lttzzlll/leetcode-java
 # gh-badge: [star, fork, follow]
 tags: [leetcode, Deep Search, Fibnacci]
