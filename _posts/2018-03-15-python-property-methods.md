@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Python - Python 自省
+title: Python 自省
 # gh-repo: lttzzlll/leetcode-java
 # gh-badge: [star, fork, follow]
-tags: [Python, 自省]
+tags: [Python, Property, 自省]
 ---
 
 ### Python 中用于自省的一些方法
