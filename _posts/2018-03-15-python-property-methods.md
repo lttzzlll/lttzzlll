@@ -13,7 +13,7 @@ tags: [Python, Property, 自省]
 
 列出对象的大多数属性。
 官方文档
-（https://docs.python.org/3/library/functions.html#dir）说，dir 函数的目的
+[https://docs.python.org/3/library/functions.html#dir](https://docs.python.org/3/library/functions.html#dir) 说，dir 函数的目的
 是交互式使用，因此没有提供完整的属性列表，只列出一组“重要的”属
 性名。dir 函数能审查有或没有 __dict__ 属性的对象。dir 函数不会
 列出 __dict__ 属性本身，但会列出其中的键。dir 函数也不会列出类
@@ -32,7 +32,7 @@ AttributeError 异常，或者返回 default 参数的值（如果设定了这
 
 如果 object 对象中存在指定的属性，或者能以某种方式（例如继
 承）通过 object 对象获取指定的属性，返回 True。
-文档（https://docs.python.org/3/library/functions.html#hasattr）说道：“这个函数
+文档 [https://docs.python.org/3/library/functions.html#hasattr](https://docs.python.org/3/library/functions.html#hasattr) 说道：“这个函数
 的实现方法是调用 getattr(object, name) 函数，看看是否抛出
 AttributeError 异常。
 
@@ -55,7 +55,7 @@ __slots__ 属性，实例没有 __dict__ 属性，那么 vars 函数不能处理
 使用点号或内置的 getattr、hasattr 和 setattr 函数存取属性都会触发下述列表中相应的特殊方法。
 但是，直接通过实例的 __dict__ 属性读写属性不会触发这些特殊方法——如果需要，通常会使用这种方式跳过特殊方法。
 
-Python 文档“Data model”一章中的“3.3.9. Special method lookup”一节（https://docs.python.org/3/reference/datamodel.html#special-methodlookup）警告说：
+Python 文档“Data model”一章中的“3.3.9. Special method lookup”一节 [https://docs.python.org/3/reference/datamodel.html#special-methodlookup](https://docs.python.org/3/reference/datamodel.html#special-methodlookup) 警告说：
 对用户自己定义的类来说，如果隐式调用特殊方法，仅当特殊方法在对象所属的类型上定义，而不是在对象的实例字典中定义时，才能确保调用成功。也就是说要假定特殊方法从类上获取，即便操作目标是实例也是如此。因此，特殊方法不会被同名实例属性遮盖。在下述示例中，假设有个名为 Class 的类，obj 是 Class 类的实例，attr 是 obj 的属性。不管是使用点号存取属性，还是使用 19.6.2 节列出的某个内置函数，都会触发下述特殊方法中的一个。例如，obj.attr 和 getattr(obj, 'attr', 42) 都会触发Class.__getattribute__(obj, 'attr') 方法。
 
 ### __delattr__(self, name)
