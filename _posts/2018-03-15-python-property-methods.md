@@ -8,6 +8,7 @@ tags: [Python, Property, 自省]
 
 ### Python 中用于自省的一些方法
 
+
 ### dir([object])
 
 列出对象的大多数属性。
