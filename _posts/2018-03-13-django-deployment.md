@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Django Deployment Django 部署
+title:  Django 部署
 # gh-repo: lttzzlll/leetcode-java
 # gh-badge: [star, fork, follow]
 tags: [Django, Nginx, uWSGI, Ubuntu]
