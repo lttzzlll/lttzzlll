@@ -1,3 +1,11 @@
+---
+layout: post
+title: Python Interview
+# gh-repo: lttzzlll/leetcode-java
+# gh-badge: [star, fork, follow]
+tags: [Python, Interview]
+---
+
 ### 简述Python中is和==的区别
 
 is 用来比对两个引用是否指向同一个内存对象
