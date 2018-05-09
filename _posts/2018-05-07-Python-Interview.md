@@ -764,27 +764,44 @@ refer [TCP和UDP的最完整的区别](https://blog.csdn.net/li_ning_/article/de
 ###### 三次握手
 所谓三次握手(Three-way Handshake)，是指建立一个 TCP 连接时，需要客户端和服务器总共发送3个数据包。
 
+![](https://mmbiz.qpic.cn/mmbiz_png/t1f5IicysA2xFlwn0x28IvsZpSrv37N5DNrEWrI9BXVbrbU9kXLkkYribgC1CDiak0nemMBkgq4xGMmAH1QnTVltw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+
 ###### 四次挥手
 TCP 的连接的拆除需要发送四个数据包，因此称为四次挥手(Four-way handshake)，也叫做改进的三次握手。
+
+![](https://mmbiz.qpic.cn/mmbiz_png/t1f5IicysA2xFlwn0x28IvsZpSrv37N5Dqmo77LWjCxVbnAeUW4icQSY6R1XsDnepmeFDMiaMGgJfR16LYF8Fsd0A/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
 
 refer [https://hit-alibaba.github.io/interview/basic/network/TCP.html#%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E4%B8%8E%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B](https://hit-alibaba.github.io/interview/basic/network/TCP.html)
 
 refer [通俗大白话来理解TCP协议的三次握手和四次分手](https://github.com/jawil/blog/issues/14)
 
-5.TIME_WAIT过多是因为什么； 
+5.TIME_WAIT过多是因为什么(close_wait)； 
 
 ###### TIME_WAIT状态
 
 根据TCP协议，主动发起关闭的一方，会进入TIME_WAIT状态，持续2*MSL(Max Segment Lifetime)，缺省为240秒，在这个post中简洁的介绍了为什么需要这个状态。
 
-值得一说的是，对于基于TCP的HTTP协议，关闭TCP连接的是Server端，这样，Server端会进入TIME_WAIT状态，可想而知，对于访问量大的Web Server，会存在大量的TIME_WAIT状态，假如server一秒钟接收1000个请求，那么就会积压240*1000=240，000个TIME_WAIT的记录，维护这些状态给Server带来负担。当然现代操作系统都会用快速的查找算法来管理这些TIME_WAIT，所以对于新的TCP连接请求，判断是否hit中一个TIME_WAIT不会太费时间，但是有这么多状态要维护总是不好。
+值得一说的是，对于基于TCP的HTTP协议，关闭TCP连接的是Server端，这样，Server端会进入TIME_WAIT状态，可想而知，对于访问量大的Web Server，会存在大量的TIME_WAIT状态，假如server一秒钟接收1000个请求，那么就会积压240*1000=240，000个TIME_WAIT的记录，维护这些状态给Server带来负担。当然现代操作系统都会用快速的查找算法来管理这些TIME_WAIT，所以对于新的TCP连接请求，判断是否hit中一个TIME_WAIT不会太费时间，但是有这么多状态要维护总是不好。time_wait通过修改系统参数可以缓解。
+
+###### CLOSE_WAIT 状态
+
+close_wait出现在被动关闭连接的一方，通常是程序写的不好引起的。起因就是在客户端关闭连接之后服务器端的程序没有发出ACK确认信号。换句话说，就是在对方连接关闭之后，程序里没有检测到，或者程序压根就忘记了这个时候需要关闭连接，于是这个资源就一直被程序占着。
+
+**一句话，出现了大量CLOSE_WAIT状态，检查下你的代码**
+
+
+refer [TIME_WAIT和CLOSE_WAIT解惑](http://java.jr-jr.com/2015/12/07/close-wait-time-wait/)
 
 refer [如何解决TIME_WAIT过多的解决办法（附Socket中的TIME_WAIT状态详解）](http://blog.51cto.com/johnsteven/817224)
 
 6.http一次连接的全过程：你来说下从用户发起request——到用户接收到response； 
+
 7.http连接方式。get和post的区别，你还了解其他的方式么； 
+
 8.restful你知道么； 
+
 9.状态码你知道多少，比如200/403/404/504等等；
+
 
 refer [HTTP协议详解以及URL具体访问过程](http://www.cnblogs.com/phpstudy2015-6/p/6810130.html)
 
