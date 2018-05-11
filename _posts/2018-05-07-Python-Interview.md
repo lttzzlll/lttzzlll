@@ -1294,12 +1294,14 @@ refer [Django-CSRF](https://docs.djangoproject.com/en/2.0/ref/csrf/)
 
 9.session和cookie的联系与区别；session为什么说是安全的； 
 
-###### Session:
+###### Session
+
 1. IDU is stored on server (i.e. server-side)
 2. Safer (because of 1)
 3. Expiration can not be set, session variables will be expired when users close the browser. (nowadays it is stored for 24 minutes as default in php)
 
-###### Cookies:
+###### Cookies
+
 1. IDU is stored on web-browser (i.e. client-side)
 2. Not very safe, since hackers can reach and get your information (because of 1)
 3. Expiration can be set (see setcookies() for more information)
