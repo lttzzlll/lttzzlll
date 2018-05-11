@@ -47,15 +47,15 @@ deepcopy设计中需要注意的问题主要是对象自己是否存在循环引
 
 详细内容参考这篇文章[为了 1% 情形，牺牲 99% 情形下的性能:蜗牛般的 Python 深拷贝](http://www.algorithmdog.com/slow-python-deepcopy)。
 
-3.__new__() 与 __init__()的区别；
+3. \__new\__() 与 \__init\__()的区别；
 
-Use __new__ when you need to control the creation of a new instance. Use __init__ when you need to control initialization of a new instance.
+Use \__new\__ when you need to control the creation of a new instance. Use \__init\__ when you need to control initialization of a new instance.
 
-__new__ is the first step of instance creation. It's called first, and is responsible for returning a new instance of your class. In contrast, __init__ doesn't return anything; it's only responsible for initializing the instance after it's been created.
+\__new\__ is the first step of instance creation. It's called first, and is responsible for returning a new instance of your class. In contrast, \__init\__ doesn't return anything; it's only responsible for initializing the instance after it's been created.
 
-In general, you shouldn't need to override __new__ unless you're subclassing an immutable type like str, int, unicode or tuple.
+In general, you shouldn't need to override \__new\__ unless you're subclassing an immutable type like str, int, unicode or tuple.
 
-简单说，__new__ 用来创建对象(控制对象的创建行为), __init__ 用来初始化对象。从这两者的功能上来讲，先执行 __new__ 后执行 __init__ , 即 __new__ 的返回值作为 __init__(self, ..) 的默认第一个参数。在自定义类的时候通常都需要编写 __init__ 方法, 因为对象通常都是由状态的, 所以需要一些变量来表示这些状态。而 __new__ 则经常和元类在一起使用，用来控制类对象(特别是继承后的子类)的创建行为，从而实现一些高级一点的东西，比如 ORM。
+简单说，\__new\__ 用来创建对象(控制对象的创建行为), \__init\__ 用来初始化对象。从这两者的功能上来讲，先执行 \__new\__ 后执行 \__init\__ , 即 \__new\__ 的返回值作为 \__init\__(self, ..) 的默认第一个参数。在自定义类的时候通常都需要编写 \__init\__ 方法, 因为对象通常都是由状态的, 所以需要一些变量来表示这些状态。而 \__new\__ 则经常和元类在一起使用，用来控制类对象(特别是继承后的子类)的创建行为，从而实现一些高级一点的东西，比如 ORM。
 
 refer [Why is __init__() always called after __new__()?](https://stackoverflow.com/questions/674304/why-is-init-always-called-after-new)
 
@@ -797,6 +797,21 @@ refer [如何解决TIME_WAIT过多的解决办法（附Socket中的TIME_WAIT状�
 6.http一次连接的全过程：你来说下从用户发起request——到用户接收到response； 
 
 7.http连接方式。get和post的区别，你还了解其他的方式么； 
+
+
+###### https 原理过程详解
+
+refer [http://honglu.me/2016/01/13/HTTPS详解/](http://honglu.me/2016/01/13/HTTPS详解/)
+
+refer [http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html](http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html)
+
+refer [http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)
+
+refer [http://www.ruanyifeng.com/blog/2006/12/notes_on_cryptography.html](http://www.ruanyifeng.com/blog/2006/12/notes_on_cryptography.html)
+
+refer [http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html](http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html)
+
+refer [详解https是如何确保安全的？](http://www.wxtlife.com/2016/03/27/%E8%AF%A6%E8%A7%A3https%E6%98%AF%E5%A6%82%E4%BD%95%E7%A1%AE%E4%BF%9D%E5%AE%89%E5%85%A8%E7%9A%84%EF%BC%9F/)
 
 8.restful你知道么； 
 
