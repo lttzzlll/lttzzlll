@@ -133,7 +133,7 @@ timezone: "Asia/Shanghai"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
-paginate: 10
+paginate: 999999
 
 kramdown:
   input: GFM
