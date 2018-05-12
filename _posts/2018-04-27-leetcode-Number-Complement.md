@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LeetCode Number Complement  
+title: LeetCode Number Complement
 # gh-repo: lttzzlll/leetcode-java
 # gh-badge: [star, fork, follow]
 tags: [LeetCode, Bit Operation]
