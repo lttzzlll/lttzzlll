@@ -42,12 +42,12 @@ avatar: "/img/self-icon.jpg"
 # By default, the navigation bar and footer have a light gray background, and the main page
 # has a white background. You can specify a different background colour or a background image
 # for the navigation bar, the main page, and the footer.
-# navbar-col: "orange"
-# navbar-img: "/img/bgimage.png"
-# footer-col: "blue"
-# footer-img: "/img/bgimage.png"
-# page-col: "#FF0000"
-# page-img: "/img/bgimage.png"
+navbar-col: "orange"
+navbar-img: "/img/bgimage.png"
+footer-col: "blue"
+footer-img: "/img/bgimage.png"
+page-col: "#FF0000"
+page-img: "/img/bgimage.png"
 
 # --- Footer options --- #
 
@@ -133,7 +133,7 @@ timezone: "Asia/Shanghai"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
-paginate: 5
+paginate: 10
 
 kramdown:
   input: GFM
