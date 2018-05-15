@@ -1193,11 +1193,15 @@ zadd,zrange,zrem,zcard等
 实现方式：
 
 Redis sorted set的内部使用HashMap和跳跃表(SkipList)来保证数据的存储和有序，HashMap里放的是成员到score的映射，而跳跃表里存放的是所有的成员，排序依据是HashMap里存的score,使用跳跃表的结构可以获得比较高的查找效率，并且在实现上比较简单。
- 
+
+
+Redis 集群是一个提供在多个Redis间节点间共享数据的程序集。 Redis 集群没有使用一致性hash, 而是引入了 哈希槽的概念。
 
 refer [Redis数据类型及使用场景](https://blog.csdn.net/stonenie/article/details/53509663)
 
 refer [redis 五种数据类型及其使用场景](http://www.cleey.com/blog/single/id/808.html)
+
+refer [Redis集群介绍](http://www.redis.cn/topics/cluster-tutorial.html)
 
 Linux部分
 
